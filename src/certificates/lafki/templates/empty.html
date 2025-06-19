@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sertifikat LAFKI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet"> <!-- Impor font Oswald -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 297mm;
+            height: 420mm;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://sinar.kemkes.go.id/assets/sertifikat/lafkikosong.jpeg');
+            background-size: 297mm 420mm;
+            background-position: top center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .certificate {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            padding: 40mm 30mm;
+            box-sizing: border-box;
+        }
+
+        .content {
+            display: flex; /* Menggunakan flexbox */
+            flex-direction: column; /* Mengatur arah kolom */
+            align-items: center; /* Menyelaraskan elemen di tengah */
+            z-index: 1;
+            text-align: center; /* Menyelaraskan teks di tengah */
+        }
+
+        .certificate-number {
+            font-family: 'Oswald', sans-serif; /* Menggunakan font Oswald */
+            font-size: 16pt;
+            color: #000;
+            margin-top: 30mm; /* Geser 3 cm ke bawah (2,5 cm + 0,5 cm) */
+            margin-bottom: 10mm; /* Mengurangi margin bawah */
+            font-weight: bold; /* Menjadikan teks bold */
+        }
+
+        .given-to {
+            font-family: 'Oswald', sans-serif; /* Menggunakan font Oswald */
+            font-size: 18pt;
+            color: #000;
+            margin-top: 0.5mm; /* Geser 1,5 cm ke bawah */
+            margin-bottom: 2mm; /* Mengurangi margin bawah */
+        }
+
+        .hospital-name {
+            font-family: 'Oswald', sans-serif; /* Menggunakan font Oswald */
+            font-size: 30pt; /* Kecilkan ukuran font */
+            color: #000;
+            margin: 0.5mm 0; /* Mengurangi margin atas untuk mendekatkan ke "Diberikan Kepada" */
+            font-weight: bold;
+        }
+
+        .address-label {
+            font-family: 'Oswald', sans-serif; /* Menggunakan font Oswald */
+            font-size: 16pt;
+            color: #000;
+            margin-top: 12mm; /* Geser 1,5 cm ke bawah */
+            margin-bottom: 5mm;
+        }
+
+        .address {
+            font-family: 'Oswald', sans-serif; /* Menggunakan font Oswald */
+            font-size: 16pt;
+            color: #000;
+            margin: 0 auto;
+            line-height: 1.5;
+            max-width: 80%;
+        }
+
+        .valid-until-label {
+            font-family: 'Oswald', sans-serif;
+            font-size: 18pt;
+            color: #000;
+            margin-top: 8mm;      /* jarak tetap dari area bintang */
+            margin-bottom: 2mm;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .valid-until {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22pt;
+            color: #000;
+            margin-bottom: 5mm;
+        }
+
+        .achievement-level {
+            font-family: 'Oswald', sans-serif; /* Menggunakan font Oswald */
+            font-size: 22pt;
+            color: #000;
+            margin-top: 20mm;
+        }
+
+        .stars {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40mm;         /* tinggi tetap, sesuaikan agar cukup untuk gambar tertinggi */
+            margin-top: 15mm;
+            margin-bottom: 0;
+            width: 100%;
+            overflow: hidden;     /* agar gambar tidak keluar area */
+        }
+
+        .star {
+            max-height: 28mm;     /* tinggi maksimum gambar bintang */
+            width: auto;
+            object-fit: contain;  /* gambar selalu proporsional */
+            margin: 0;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate">
+        <div class="content">
+            <div class="certificate-number">
+                Nomor : {{registrationNumber}}
+            </div>
+            
+            <div class="given-to">
+                Diberikan Kepada :
+            </div>
+            
+            <div class="hospital-name">{{name}}</div>
+            
+            <div class="address-label">
+                Alamat :
+            </div>
+            <div class="address">{{address}}</div>
+            
+            <div class="achievement-level">
+                Tingkat Kelulusan
+            </div>
+            <div class="stars">
+                <img src="{{starsUrl}}" class="star" alt="Star">
+            </div>
+            <div class="valid-until-label">Berlaku Sampai : {{validUntil}}</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,241 @@
+### Generate 3 Sertifikat Lafki Sekaligus
+POST http://localhost:3000/api/certificates/generate
+Content-Type: application/json
+
+[
+  {
+    "lembaga": "lafki",
+    "type": "empty",
+    "name": "RS lafki Contoh",
+    "registrationNumber": "LARSI/2025/001",
+    "address": "Alamat LARSI",
+    "id_rekomendasi": "3473",
+    "validUntil": "2026-01-01",
+    "starLevel": "Utama"
+  },
+  {
+    "lembaga": "lafki",
+    "type": "lembaga",
+    "name": "RS lafki Contoh",
+    "registrationNumber": "LARSI/2025/001",
+    "address": "Alamat LARSI",
+    "id_rekomendasi": "3473",
+    "validUntil": "2026-01-01",
+    "starLevel": "Utama"
+  },
+  {
+    "lembaga": "lafki",
+    "type": "dirjen",
+    "name": "RS lafki Contoh",
+    "registrationNumber": "LARSI/2025/001",
+    "address": "Alamat LARSI",
+    "id_rekomendasi": "3473",
+    "validUntil": "2026-01-01",
+    "starLevel": "Utama"
+  }
+]
+
+
+### Generate 3 Sertifikat KARS Sekaligus
+POST http://localhost:3000/api/certificates/generate
+Content-Type: application/json
+
+[
+  {
+    "lembaga": "kars",
+    "type": "empty",
+    "name": "RS Eka Hospital Depok",
+    "registrationNumber": "KARS-SERT/1526/IV/2025",
+    "address": "Alamat KARS",
+    "provinsi": "Jawa Barat",
+    "id_rekomendasi": "3468",
+    "validUntil": "22 Mei 2025",
+    "starLevel": "Paripurna",
+    "kotaTanggal": "Jakarta, 22 Mei 2025"
+  },
+  {
+    "lembaga": "kars",
+    "type": "lembaga",
+    "name": "RS Eka Hospital Depok",
+    "registrationNumber": "KARS-SERT/1526/IV/2025",
+    "address": "Alamat KARS",
+    "provinsi": "Jawa Barat",
+    "id_rekomendasi": "3468",
+    "validUntil": "22 Mei 2025",
+    "starLevel": "Paripurna",
+    "kotaTanggal": "Jakarta, 22 Mei 2025"
+  },
+  {
+    "lembaga": "kars",
+    "type": "dirjen",
+    "name": "RS Eka Hospital Depok",
+    "registrationNumber": "KARS-SERT/1526/IV/2025",
+    "address": "Alamat KARS",
+    "provinsi": "Jawa Barat",
+    "id_rekomendasi": "3468",
+    "validUntil": "22 Mei 2025",
+    "starLevel": "Paripurna",
+    "kotaTanggal": "Jakarta, 22 Mei 2025"
+  }
+]
+
+
+### Generate 3 Sertifikat LAM Sekaligus
+POST http://localhost:3000/api/certificates/generate
+Content-Type: application/json
+
+[
+  {
+    "lembaga": "lam",
+    "type": "empty",
+    "name": "RS LAM Contoh",
+    "registrationNumber": "LAM/2025/001",
+    "address": "Alamat LAM",
+    "id_rekomendasi": "LAM001",
+    "validUntil": "20 Desember 2028",
+    "starLevel": "Paripurna",
+    "kotaTanggal": "Jakarta, 22 Mei 2025"
+  },
+  {
+    "lembaga": "lam",
+    "type": "lembaga",
+    "name": "RS LAM Contoh",
+    "registrationNumber": "LAM/2025/001",
+    "address": "Alamat LAM",
+    "id_rekomendasi": "LAM001",
+    "validUntil": "20 Desember 2028",
+    "starLevel": "Paripurna",
+    "kotaTanggal": "Jakarta, 22 Mei 2025"
+  },
+  {
+    "lembaga": "lam",
+    "type": "dirjen",
+    "name": "RS LAM Contoh",
+    "registrationNumber": "LAM/2025/001",
+    "address": "Alamat LAM",
+    "id_rekomendasi": "LAM001",
+    "validUntil": "20 Desember 2028",
+    "starLevel": "Paripurna",
+    "kotaTanggal": "Jakarta, 22 Mei 2025"
+  }
+]
+
+
+### Generate 3 Sertifikat LARS Sekaligus
+POST http://localhost:3000/api/certificates/generate
+Content-Type: application/json
+[
+  {
+    "lembaga": "lars",
+    "type": "empty",
+    "name": "RS LARS Contoh",
+    "registrationNumber": "LARS/2025/001",
+    "address": "Alamat LARS",
+    "id_rekomendasi": "LARS001",
+    "validUntil": "20 Desember 2028",
+    "starLevel": "Paripurna",
+    "kotaTanggal": "Jakarta, 22 Mei 2025"
+  },
+  {
+    "lembaga": "lars",
+    "type": "lembaga",
+    "name": "RS LARS Contoh",
+    "registrationNumber": "LARS/2025/001",
+    "address": "Alamat LARS",
+    "id_rekomendasi": "LARS001",
+    "validUntil": "20 Desember 2028",
+    "starLevel": "Paripurna",
+    "kotaTanggal": "Jakarta, 22 Mei 2025"
+  },
+  {
+    "lembaga": "lars",
+    "type": "dirjen",
+    "name": "RS LARS Contoh",
+    "registrationNumber": "LARS/2025/001",
+    "address": "Alamat LARS",
+    "id_rekomendasi": "LARS001",
+    "validUntil": "20 Desember 2028",
+    "starLevel": "Paripurna",
+    "kotaTanggal": "Jakarta, 22 Mei 2025"
+  }
+]
+
+
+### Generate 3 Sertifikat LARSDHP Sekaligus
+POST http://localhost:3000/api/certificates/generate
+Content-Type: application/json
+[
+  {
+    "lembaga": "larsdhp",
+    "type": "empty",
+    "name": "RS LARSDHP Contoh",
+    "registrationNumber": "LARSDHP/2025/001",
+    "address": "Alamat LARSDHP",
+    "id_rekomendasi": "LARSDHP001",
+    "validUntil": "20 Desember 2028",
+    "starText": "PARIPURNA",
+    "kotaTanggal": "Jakarta, 22 Mei 2025"
+  },
+  {
+    "lembaga": "larsdhp",
+    "type": "lembaga",
+    "name": "RS LARSDHP Contoh",
+    "registrationNumber": "LARSDHP/2025/001",
+    "address": "Alamat LARSDHP",
+    "id_rekomendasi": "LARSDHP001",
+    "validUntil": "20 Desember 2028",
+    "starText": "PARIPURNA",
+    "kotaTanggal": "Jakarta, 22 Mei 2025"
+  },
+  {
+    "lembaga": "larsdhp",
+    "type": "dirjen",
+    "name": "RS LARSDHP Contoh",
+    "registrationNumber": "LARSDHP/2025/001",
+    "address": "Alamat LARSDHP",
+    "id_rekomendasi": "LARSDHP001",
+    "validUntil": "20 Desember 2028",
+    "starText": "PARIPURNA",
+    "kotaTanggal": "Jakarta, 22 Mei 2025"
+  }
+]
+
+
+### Generate 3 Sertifikat LARSI Sekaligus
+POST http://localhost:3000/api/certificates/generate
+Content-Type: application/json
+[
+  {
+    "lembaga": "larsi",
+    "type": "empty",
+    "name": "RS LARSI Contoh",
+    "registrationNumber": "LARSI/2025/001",
+    "address": "Alamat LARSI",
+    "id_rekomendasi": "LARSI001",
+    "validUntil": "20 Desember 2028",
+    "starLevel": "Paripurna",
+    "kotaTanggal": "Jakarta, 22 Mei 2025"
+  },
+  {
+    "lembaga": "larsi",
+    "type": "lembaga",
+    "name": "RS LARSI Contoh",
+    "registrationNumber": "LARSI/2025/001",
+    "address": "Alamat LARSI",
+    "id_rekomendasi": "LARSI001",
+    "validUntil": "20 Desember 2028",
+    "starLevel": "Paripurna",
+    "kotaTanggal": "Jakarta, 22 Mei 2025"
+  },
+  {
+    "lembaga": "larsi",
+    "type": "dirjen",
+    "name": "RS LARSI Contoh",
+    "registrationNumber": "LARSI/2025/001",
+    "address": "Alamat LARSI",
+    "id_rekomendasi": "LARSI001",
+    "validUntil": "20 Desember 2028",
+    "starLevel": "Paripurna",
+    "kotaTanggal": "Jakarta, 22 Mei 2025"
+  }
+]

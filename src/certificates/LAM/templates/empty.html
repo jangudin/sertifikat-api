@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sertifikat Akreditasi RS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet"> <!-- Impor font Oswald -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Times New Roman", Times, serif !important;
+        }
+        
+        body {
+            width: 297mm;
+            height: 420mm;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://sinar.kemkes.go.id/assets/bgsertifikat/newKARS-0.jpg');
+            background-size: 297mm 420mm;
+            background-position: top center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .certificate {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            padding: 40mm 30mm;
+            box-sizing: border-box;
+        }
+
+        .content {
+            display: flex; /* Menggunakan flexbox */
+            flex-direction: column; /* Mengatur arah kolom */
+            align-items: center; /* Menyelaraskan elemen di tengah */
+            z-index: 1;
+            text-align: center; /* Menyelaraskan teks di tengah */
+        }
+
+        .certificate-number {
+            font-family: Consolas, Monaco, 'Courier New', Courier, monospace; /* Ubah ke font monospace */
+            font-size: 22pt;
+            color: #000;
+            margin-top: 75mm; /* Geser 3 cm ke bawah (2,5 cm + 0,5 cm) */
+            margin-bottom: 10mm; /* Mengurangi margin bawah */
+        }
+
+        .given-to,
+        .hospital-name,
+        .address-label,
+        .address,
+        .provinsi,
+        .valid-until-label,
+        .valid-until,
+        .achievement-level,
+        .stars,
+        .star,
+        .mengetahui-label {
+        font-family: "Times New Roman", Times, serif !important;
+    }
+
+        .given-to {
+            font-size: 18pt;
+            color: #000;
+            margin-top: 25mm !important; /* contoh: 10mm + 5mm */
+            margin-bottom: 2mm; /* Mengurangi margin bawah */
+        }
+
+        .hospital-name {
+            font-size: 28pt; /* Kecilkan ukuran font */
+            color: #000;
+            margin: 0.5mm 0; /* Mengurangi margin atas untuk mendekatkan ke "Diberikan Kepada" */
+            font-weight: bold;
+        }
+
+        .address-label {
+            font-size: 18pt;
+            color: #000;
+            margin-top: 1mm; /* Geser 1,5 cm ke bawah */
+            margin-bottom: 1mm;
+        }
+
+        .address {
+            font-size: 16pt;
+            color: #000;
+            margin: 0 auto;
+            line-height: 1.5;
+            max-width: 80%;
+        }
+
+        .provinsi {
+        font-size: 20pt;
+        color: #000;
+        margin-top: 2mm;
+        margin-bottom: 5mm;
+        }
+
+        .valid-until-label {
+            font-size: 20pt;
+            color: #000;
+            margin-top: 0 !important;      /* Tidak ada jarak atas */
+            margin-bottom: 2mm;
+            width: 100%;
+            text-align: center;
+        }
+
+        .valid-until {
+            font-size: 22pt;
+            color: #000;
+            margin-bottom: 5mm;
+        }
+
+        .achievement-level {
+            font-size: 20pt;
+            color: #000;
+            margin-top: 25mm;
+            margin-bottom: 0 !important;   /* Tidak ada jarak bawah */
+            width: 80mm;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .stars {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            margin-top: 0 !important;      /* Tidak ada jarak atas */
+            margin-bottom: 0 !important;   /* Tidak ada jarak bawah */
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .star {
+            max-height: 28mm;     /* tinggi maksimum gambar bintang */
+            width: auto;
+            object-fit: contain;  /* gambar selalu proporsional */
+            margin: 0;
+            display: block;
+        }
+
+        .tanggal-kota {
+            font-family: Consolas, Monaco, 'Courier New', Courier, monospace;
+            font-size: 20pt;
+            color: #000;
+            margin-top: 25mm;
+            text-align: center;
+            width: 100%;
+            letter-spacing: 1px;
+        }
+
+        .mengetahui-label {
+            font-size: 18pt;
+            color: #000;
+            margin-top: 10mm;
+            text-align: left;
+            width: 100%;
+            font-family: "Times New Roman", Times, serif;
+            margin-left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate">
+        <div class="content">
+            <div class="certificate-number">
+                Nomor : {{registrationNumber}}
+            </div>
+            
+            <div class="given-to">
+                Diberikan Kepada :
+            </div>
+            
+            <div class="hospital-name">{{name}}</div>
+            <div class="address-label">
+                Alamat :
+            </div>
+            <div class="address">{{address}}</div>
+            <div class="achievement-level">
+                Tingkat Kelulusan
+            </div>
+            <div class="stars">
+                <img src="{{starsUrl}}" class="star" alt="Star">
+            </div>
+            <div class="valid-until-label">Berlaku Sampai: {{validUntil}}</div>
+            <div class="tanggal-kota">{{kotaTanggal}}</div>
+            <div class="mengetahui-label">Mengetahui,</div>
+        </div>
+    </div>
+</body>
+</html>
