@@ -122,7 +122,7 @@ Content-Type: application/json
 
 
 ### Generate 3 Sertifikat LARS Sekaligus
-POST http://localhost:3000/api/certificates/generate
+POST 192.168.67.143:3000/api/certificates/generate
 Content-Type: application/json
 [
   {
